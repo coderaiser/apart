@@ -1,7 +1,7 @@
 {
   "name": "apart",
   "version": "1.0.0",
-  "description": "simplest apart implementation",
+  "description": "partial function application",
   "main": "lib/apart.js",
   "scripts": {
     "test": "tape test/*.js",
