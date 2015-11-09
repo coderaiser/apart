@@ -1,0 +1,43 @@
+{
+  "name": "apart",
+  "version": "1.0.0",
+  "description": "simplest apart implementation",
+  "main": "lib/apart.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "build": "npm-run-all clean 6to5 bundle bundle:es6 minify",
+    "minify": "minify dist/apart.js > dist/apart.min.js",
+    "6to5": "babel -d lib src",
+    "wisdom": "npm run build",
+    "jscs-fix": "jscs --esnext test src --fix",
+    "clean": "rimraf lib/* dist/*",
+    "bundle:base": "browserify -s apart --ng false",
+    "bundle": "npm run bundle:base -- -r ./lib/apart.js:apart ./lib/apart.js -o dist/apart.js",
+    "bundle:es6:base": "npm run bundle:base -- -r ./src/apart.js:apart ./src/apart.js",
+    "bundle:es6": "npm run bundle:es6:base -- -o dist/apart.es6.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/apart.git"
+  },
+  "keywords": [
+    "apart",
+    "partial",
+    "functional"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/apart/issues"
+  },
+  "homepage": "https://github.com/coderaiser/apart",
+  "devDependencies": {
+    "babel-cli": "^6.1.1",
+    "babel-preset-es2015": "^6.0.15",
+    "browserify": "~12.0.1",
+    "jscs": "^2.4.0",
+    "npm-run-all": "^1.2.12",
+    "rimraf": "^2.4.3",
+    "tape": "^4.2.0"
+  }
+}
