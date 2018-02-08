@@ -33,7 +33,7 @@
   "homepage": "https://github.com/coderaiser/apart",
   "devDependencies": {
     "babel-cli": "^6.1.1",
-    "browserify": "^15.2.0",
+    "browserify": "^16.0.0",
     "jscs": "^3.0.3",
     "redrun": "^5.0.1",
     "rimraf": "^2.4.3",
