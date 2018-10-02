@@ -1,6 +1,7 @@
 language: node_js
 node_js:
-    - 5
+    - 8
+    - 10
 
 script:
   - npm test
@@ -11,3 +12,4 @@ notifications:
         on_failure: change
 
 sudo: false
+
