@@ -27,8 +27,9 @@
   },
   "homepage": "https://github.com/coderaiser/apart",
   "devDependencies": {
-    "babel-cli": "^6.1.1",
-    "babel-preset-env": "^1.6.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "browserify": "^16.0.0",
     "eslint": "^5.6.1",
     "redrun": "^6.0.0",
