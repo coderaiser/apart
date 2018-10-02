@@ -5,15 +5,15 @@ Partial function application.
 ## Install
 
 ```
-npm i apart --save
+npm i apart
 ```
 
 ## How to use?
 
 ```js
-let apart   = require('apart');
-let sum     = (a, b) => a + b;
-let inc     = apart(sum, 1);
+const apart = require('apart');
+const sum = (a, b) => a + b;
+const inc = apart(sum, 1);
 
 inc(9);
 // returns
