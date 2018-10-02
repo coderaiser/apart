@@ -6,10 +6,11 @@
   "scripts": {
     "test": "tape test/*.js",
     "lint": "eslint lib",
-    "build": "redrun clean 6to5",
+    "build": "redrun clean 6to5 legacy:*",
     "6to5": "babel -d legacy lib",
     "wisdom": "npm run build",
-    "clean": "rimraf legacy"
+    "clean": "rimraf legacy",
+    "legacy:index": "echo \"module.exports = require('./apart');\" > legacy/index.js"
   },
   "repository": {
     "type": "git",
