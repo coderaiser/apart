@@ -5,16 +5,11 @@
   "main": "lib/apart.js",
   "scripts": {
     "test": "tape test/*.js",
-    "build": "redrun clean 6to5 bundle bundle:es6 minify",
-    "minify": "minify dist/apart.js > dist/apart.min.js",
-    "6to5": "babel -d lib src",
+    "lint": "eslint lib",
+    "build": "redrun clean 6to5",
+    "6to5": "babel -d legacy lib",
     "wisdom": "npm run build",
-    "jscs-fix": "jscs --esnext test src --fix",
-    "clean": "rimraf lib/* dist/*",
-    "bundle:base": "browserify -s apart --ng false",
-    "bundle": "npm run bundle:base -- -r ./lib/apart.js:apart ./lib/apart.js -o dist/apart.js",
-    "bundle:es6:base": "npm run bundle:base -- -r ./src/apart.js:apart ./src/apart.js",
-    "bundle:es6": "npm run bundle:es6:base -- -o dist/apart.es6.js"
+    "clean": "rimraf legacy"
   },
   "repository": {
     "type": "git",
@@ -33,13 +28,12 @@
   "homepage": "https://github.com/coderaiser/apart",
   "devDependencies": {
     "babel-cli": "^6.1.1",
+    "babel-preset-env": "^1.6.1",
     "browserify": "^16.0.0",
-    "jscs": "^3.0.3",
+    "eslint": "^5.6.1",
     "redrun": "^6.0.0",
     "rimraf": "^2.4.3",
     "tape": "^4.2.0"
   },
-  "dependencies": {
-    "babel-preset-env": "^1.6.1"
-  }
+  "dependencies": {}
 }
