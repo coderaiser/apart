@@ -1,6 +1,6 @@
 {
   "name": "apart",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "partial function application",
   "main": "lib/apart.js",
   "scripts": {
